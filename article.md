@@ -4,15 +4,15 @@ By Peter Zhang
 
 #### Introduction
 
-Tournaments this season have, so far, been held exclusively online. While judging debate rounds certainly feels different through a Zoom window, virtual platforms could also affect who chooses to sign up for tournaments.
+Tournaments this season have, so far, been held exclusively online. While judging debate rounds certainly feels different through a Zoom window, virtual platforms could have also affected who chooses to sign up for tournaments.
 
-Plenty of factors could be relevant in the transition. One is that location no longer matters: you can compete at someone's tournament whether you're in the same county or across the country. At the same time, the format could reward debaters with better Wi-Fi connections and mics. Many other factors, like the economic hardship imposed by the pandemic or decreased support from schools, may also alter the face of the competition.
+Plenty of factors could be relevant in the transition. One is that location no longer matters: you can compete at a tournament whether you're in the same county or across the country. At the same time, the format could reward debaters with better Wi-Fi connections and mics. Many other factors, like the economic hardship imposed by the pandemic or decreased support from schools, may also alter the face of the competition.
 
 So, who are the e-debaters? This article takes a look at five trends in the data.
 
 #### Dataset
 
-I considered every tournament held from September to December of 2020 with a bid in LD, as well as their 2019 counterparts. After excluding tournaments that didn't post entries (Scarvite) or weren't hosted in 2019 (Delores), the dataset included 27 tournaments[^1]. For each of the remaining tournaments, I scraped information on Varsity LD competitors off the Tabroom entries page. Entries that lacked a location were omitted from the geographic analysis. The full dataset of entries is available [here](https://github.com/petezh/Disclosure/blob/master/tab_data/edebate_entries.csv).
+I considered every tournament held from September to December of 2020 with a bid in LD, as well as their 2019 counterparts. After excluding tournaments that didn't post entries (Scarvite) or weren't hosted in 2019 (Delores), the dataset included 27 tournaments[^1]. For each of the remaining tournaments, I scraped information on Varsity LD competitors off the Tabroom entries page. Entries that lacked a location were omitted from the geographic analysis.
 
 #### Analysis
 
@@ -38,7 +38,7 @@ Competitive incentives can explain the difference, and the trio of Alta, UT, and
 
 ![](images/altautpton.png)
 
-Two other case studies stand out. The first is Loyola, a *quarters* bid: it tripled the size of its pool from 66 to 172. Baffling on face, but reasonable in light of the fact that no other tournaments were scheduled for that weekend—debaters didn't have a choice.
+Two other case studies stand out. The first is Loyola, a *quarters* bid: it tripled the size of its pool from 66 to 172. Surprising on face, but reasonable in light of the fact that no other tournaments were scheduled for that weekend—debaters didn't have a choice.
 
 The second is JW Patterson and Bronx. What caused JW's entry pool to collapse? The answer, it seems, is that debaters abandoned JW (a finals bid) to compete at Bronx (an octas bid), which offered fourteen more bids. Sure enough, Bronx picked up fourteen more competitors this year. After factoring bidding opportunity, the 37 to 185 disparity seems a lot more reasonable (maybe even too small!).
 
@@ -60,7 +60,7 @@ But are these increases actually driven by debaters competing at faraway tournam
 
 I estimated the location of a given tournament or competitor from the [geographic centroid](https://developers.google.com/public-data/docs/canonical/states_csv) of their state. With two sets of coordinates, I computed the distance[^2] between a tournament and each of their competitors. It isn't very accurate, but it should certainly reveal if, for example, more West Coast debaters are competing on the East Coast.
 
-The average competitor traveled about 350 miles to tournaments in 2019; this year, the average competitor was 700 miles away from their host. Debaters from Texas, Utah, Nevada, New Jersey, Minnesota made the biggest leaps in distance, which makes sense: states that could usually count on great local tournaments have chosen to explore.
+The average competitor traveled about 350 miles to tournaments in 2019; this year, the average competitor was 700 miles away from their host. Debaters from Texas, Utah, Nevada, New Jersey, Minnesota made the biggest leaps in distance, which makes sense: debaters that normally would just attend in-state bid tournaments have chosen to explore.
 
 ![](images/distance.png)
 
@@ -80,7 +80,7 @@ These increases aren't large, but overall, wealthier and better-educated states 
 
 **Trend #5: More lone wolves and smaller teams are competing.**
 
-Finally, I took a look at the teams which sign up for tournaments. In 2019, 19.9% of entries signed up as the only competitor from their school. This year, that proportion has risen to 25.3%. In fact, the size of squads seems to be generally declining. The average team size in 2019 was 2.96, while the average team  in 2020 had 2.79 members.
+Finally, I took a look at the teams that signed up for tournaments. In 2019, 19.9% of entries signed up as the only competitor from their school. This year, that proportion has risen to 25.3%. In fact, the size of squads seems to be generally declining. The average team size in 2019 was 2.96, while the average team  in 2020 had 2.79 members.
 
 ![](images/teamfreq.png)
 
@@ -90,12 +90,12 @@ Plenty of factors could explain the trend: lone wolves might find it easier to s
 
 Based on results from tournaments this year, overall participation seems to be weathering the virtual environment—with some caveats. While competitors are more geographically diverse, the increase in entries might be skewed towards wealthier states. At the same time, more smaller teams are competing, and teams everywhere are signing up for tournaments based on bid potential.
 
-You can argue about whether these changes are net good or bad — I won't make a case for either. But, with the [TOC](https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=16714) slated to be held virtually, e-debate seems to be here to stay, at least for the rest of the season. And that means that questions about who is debating, and how they are affected by the online format, are important to consider.
+You can argue about whether these changes are net good or bad — I won't make a case for either. But, with the [TOC slated to be held virtually](https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=16714), e-debate seems to be here to stay, at least for the rest of the season. That means that questions about who is debating and how they are affected by the online format are important to consider.
 
 There were several limitations to this analysis:
 
-- I omitted tournaments that were held in the fall of 2019 that were postponed this year, which likely underestimated participation in 2019.
-- Some entries either omitted or falsified information (why, Princeton, did you say you were from Maine?). I rooted out some obvious errors, but a more detailed review could be helpful.
+- I omitted tournaments that were held in the fall of 2019 but were postponed this year, which likely underestimated participation in 2019.
+- Some entries either omitted or falsified information (why did Princeton say they were from Maine?). I rooted out some obvious errors, but a more detailed review could be helpful.
 - Estimates for location wealth, and education were all based on state-level data.
 - The z-test assumes that samples are normal. While both samples seem to be bell-shaped, normality tests decisively show that they are not normally distributed.
 - The pooled z-test assumes two independent samples. In reality, the 2019 and 2020 samples are likely to be fairly correlated, which means the standard error may be an overestimation. As a result, the p-values are probably conservative.
