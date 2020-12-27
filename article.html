@@ -1,0 +1,555 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>article</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1.5em ;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="five-trends-among-e-debate-competitors" class="md-header-anchor"></a><span>Five Trends Among E-Debate Competitors</span></h1><p><span>By Peter Zhang</span></p><h4><a name="introduction" class="md-header-anchor"></a><span>Introduction</span></h4><p><span>Tournaments this season have, so far, been held exclusively online. While judging debate rounds certainly feels different through a Zoom window, virtual platforms could also affect who chooses to sign up for tournaments.</span></p><p><span>Plenty of factors could be relevant in the transition. One is that location no longer matters: you can compete at someone&#39;s tournament whether you&#39;re in the same county or across the country. At the same time, the format could reward debaters with better Wi-Fi connections and mics. Many other factors, like the economic hardship imposed by the pandemic or decreased support from schools, may also alter the face of the competition.</span></p><p><span>So, who are the e-debaters? This article takes a look at five trends in the data.</span></p><h4><a name="dataset" class="md-header-anchor"></a><span>Dataset</span></h4><p><span>I considered every tournament held from September to December of 2020 with a bid in LD, as well as their 2019 counterparts. After excluding tournaments that didn&#39;t post entries (Scarvite) or weren&#39;t hosted in 2019 (Delores), the dataset included 27 tournaments</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span>. For each of the remaining tournaments, I scraped information on Varsity LD competitors off the Tabroom entries page. Entries that lacked a location were omitted from the geographic analysis. The full dataset of entries is available </span><a href='https://github.com/petezh/Disclosure/blob/master/tab_data/edebate_entries.csv'><span>here</span></a><span>.</span></p><h4><a name="analysis" class="md-header-anchor"></a><span>Analysis</span></h4><p><strong><span>Trend #1: There are fewer debaters, but they compete more frequently.</span></strong></p><p><span>A first glance at the data highlighted big shifts over the last year. Among them:</span></p><ul><li><span>1312 debaters competed in an average of about 2 tournaments in 2019; 1103 debaters averaged 2.77 tournaments each in 2020.</span></li><li><span>The total number of entries increased by 17.5% from 2019 to 2020. </span></li><li><span>Tournaments gained an average of 18 competitors this year.</span></li></ul><p><span>The decrease in distinct debaters shouldn&#39;t be surprising. Teams could&#39;ve had a tough time recruiting new debaters. Debaters themselves might have had other priorities in their lives. And, competitors who enjoyed the social aspects of debate may have felt that tournaments were no longer worth it. </span></p><p><span>The bump in entries is also predictable. With fewer logistical barriers, avid debaters could&#39;ve had greater access to tournaments. Moreover, many tournaments usually held early in the year were postponed (e.g. St. Marks, Notre Dame), which might have concentrated interest in remaining, available tournaments.</span></p><p><strong><span>Trend #2: Tournament pools are shaped by competitive incentives, a function of bids offered and concurrent tournaments.</span></strong></p><p><span>The increase in entries wasn&#39;t uniform across all tournaments. Twenty tournaments got more popular, but the entry pools of seven unlucky hosts either shrunk or stagnated. The differences are drastic. The size of Valley&#39;s entry pool doubled (from 93 to 201) while JW Patterson&#39;s pool was halved (from 74 to 37).</span></p><p><img src="images/changeentries.png" referrerpolicy="no-referrer"></p><p><span>Competitive incentives can explain the difference, and the trio of Alta, UT, and Princeton offers an insightful example. The three semis bid tournaments were held on the same weekend in both 2019 and 2020. This year, UT and Princeton lost a third of their entries; Alta&#39;s pool </span><em><span>increased</span></em><span> by nearly half. That&#39;s interesting enough, but let&#39;s take a look at the pools this year: UT had 100 entries, Alta had 109, and Princeton, 112—roughly equal. This equilibrium is exactly what we&#39;d expect if, in the absence of geographic barriers, debaters just followed the bids.</span></p><p><img src="images/altautpton.png" referrerpolicy="no-referrer"></p><p><span>Two other case studies stand out. The first is Loyola, a </span><em><span>quarters</span></em><span> bid: it tripled the size of its pool from 66 to 172. Baffling on face, but reasonable in light of the fact that no other tournaments were scheduled for that weekend—debaters didn&#39;t have a choice.</span></p><p><span>The second is JW Patterson and Bronx. What caused JW&#39;s entry pool to collapse? The answer, it seems, is that debaters abandoned JW (a finals bid) to compete at Bronx (an octas bid), which offered fourteen more bids. Sure enough, Bronx picked up fourteen more competitors this year. After factoring bidding opportunity, the 37 to 185 disparity seems a lot more reasonable (maybe even too small!).</span></p><p><img src="images/loypatbrx.png" referrerpolicy="no-referrer"></p><p><strong><span>Trend #3: While dominant states began debating across the county, smaller states have also ramped up participation.</span></strong></p><p><span>Of course, in many states, circuit LD has little to no presence—for most, this year hasn&#39;t changed that. This list includes Delaware, Kansas, Montana, Tennessee, Vermont, and Maine. But, some of them saw their first competitors this year: we can welcome competitors South Carolina, West Virginia, Hawaii, and Michigan to circuit LD.</span></p><p><span>Across the board, smaller states grew their presence. Just take a look at Arizona, DC, New Mexico, or Wisconsin. On average, states like these—with fewer than 20 competitors in 2019—doubled the number of entries in 2020.</span></p><p><img src="images/stateinc.png" referrerpolicy="no-referrer"></p><p><span>Among larger states, the biggest winner by far was California, where entries skyrocketed from 528 to 840 (that increase is, by necessity, omitted from the map below). New Jersey, New York, North Carolina, and Texas were stable, while Florida, Iowa, Massachusetts, Minnesota, Pennsylvania, and Washington saw moderate increases. Meanwhile, states like Alabama, Illinois, Louisiana, Nebraska, and Virginia—many in Southeast—saw fairly large declines in participation.</span></p><p><img src="images/stateentries.png" referrerpolicy="no-referrer"></p><p><span>But are these increases actually driven by debaters competing at faraway tournaments? As it turns out, yes.</span></p><p><span>I estimated the location of a given tournament or competitor from the </span><a href='https://developers.google.com/public-data/docs/canonical/states_csv'><span>geographic centroid</span></a><span> of their state. With two sets of coordinates, I computed the distance</span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup><span> between a tournament and each of their competitors. It isn&#39;t very accurate, but it should certainly reveal if, for example, more West Coast debaters are competing on the East Coast.</span></p><p><span>The average competitor traveled about 350 miles to tournaments in 2019; this year, the average competitor was 700 miles away from their host. Debaters from Texas, Utah, Nevada, New Jersey, Minnesota made the biggest leaps in distance, which makes sense: states that could usually count on great local tournaments have chosen to explore.</span></p><p><img src="images/distance.png" referrerpolicy="no-referrer"></p><p><span>On the other hand, the tournaments with the biggest increases in distance were UT, College Prep, Duke, Grapevine, Heritage, Jack Howe, Loyola, and Seattle. Tournaments that are usually attended by locals and a handful of travelers have gone national. This parallels the increase in the number of states represented at tournaments: in 2019, the average tournament hosted competitors from 9.37 states—that number is now 17.07.</span></p><p><strong><span>Trend #4: While cross-tournament differences have tightened, e-debate seems to slightly favor well-off states.</span></strong></p><p><span>While competitor pools have become more geographically diverse, I suspected that they also have become more privileged. I took the median </span><a href='https://fred.stlouisfed.org/release/tables?rid=249&amp;eid=259515'><span>real household income</span></a><span> for each state and used it as a benchmark for wealth. I also took the median </span><a href='https://www.statista.com/statistics/305987/us-average-act-scores-by-state/'><span>ACT scores</span></a><span> of each state as a proxy for the quality of education. As you might expect, states on both coasts tended to measure the highest on these metrics.</span></p><p><span>I looked at how average income and ACT scores changed for the tournaments. The geographic trends drove most of the change across these metrics, tightening the spread of ACT scores and household incomes. If a tournament mostly drew competitors from well-off states in 2019, then more competitors from less privileged states competed in 2020, and vice versa.</span></p><p><img src="images/actincome.png" referrerpolicy="no-referrer"></p><p><span>Nonetheless, the weighted average shifted upward for both metrics. The average median household income increased by $811 from 2019 to 2020; the average ACT score rose by 0.079. I conducted a two sample pooled z-test the ACTs and incomes of the 2019 and 2020 entries. The increase in ACTs scores was somewhat significant (p = 0.0465) while the increase in income was highly significant (p = 0.000546).</span></p><p><span>These increases aren&#39;t large, but overall, wealthier and better-educated states are sending more debaters to tournaments. All of this makes sense if we keep in mind which states grew the most over the shift: states like California, Massachusetts, and Washington.</span></p><p><strong><span>Trend #5: More lone wolves and smaller teams are competing.</span></strong></p><p><span>Finally, I took a look at the teams which sign up for tournaments. In 2019, 19.9% of entries signed up as the only competitor from their school. This year, that proportion has risen to 25.3%. In fact, the size of squads seems to be generally declining. The average team size in 2019 was 2.96, while the average team  in 2020 had 2.79 members.</span></p><p><img src="images/teamfreq.png" referrerpolicy="no-referrer"></p><p><span>Plenty of factors could explain the trend: lone wolves might find it easier to sign up, there&#39;s probably less need for teammates, and some tournaments have doubled down on entry caps. Regardless, this year seems to be more welcoming to smaller squads.</span></p><h4><a name="conclusion" class="md-header-anchor"></a><span>Conclusion</span></h4><p><span>Based on results from tournaments this year, overall participation seems to be weathering the virtual environment—with some caveats. While competitors are more geographically diverse, the increase in entries might be skewed towards wealthier states. At the same time, more smaller teams are competing, and teams everywhere are signing up for tournaments based on bid potential.</span></p><p><span>You can argue about whether these changes are net good or bad — I won&#39;t make a case for either. But, with the </span><a href='https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=16714'><span>TOC</span></a><span> slated to be held virtually, e-debate seems to be here to stay, at least for the rest of the season. And that means that questions about who is debating, and how they are affected by the online format, are important to consider.</span></p><p><span>There were several limitations to this analysis:</span></p><ul><li><span>I omitted tournaments that were held in the fall of 2019 that were postponed this year, which likely underestimated participation in 2019.</span></li><li><span>Some entries either omitted or falsified information (why, Princeton, did you say you were from Maine?). I rooted out some obvious errors, but a more detailed review could be helpful.</span></li><li><span>Estimates for location wealth, and education were all based on state-level data.</span></li><li><span>The z-test assumes that samples are normal. While both samples seem to be bell-shaped, normality tests decisively show that they are not normally distributed.</span></li><li><span>The pooled z-test assumes two independent samples. In reality, the 2019 and 2020 samples are likely to be fairly correlated, which means the standard error may be an overestimation. As a result, the p-values are probably conservative.</span></li></ul><p><span>Avenues for future analysis include:</span></p><ul><li><span>Extending the analysis across multiple years and different events</span></li><li><span>Incorporating more granular data, perhaps drawing on testing/income stats on the school level</span></li><li><span>Studying judge pools—are they similarly diversifying?</span></li><li><span>Cross-referencing the wiki to infer changes in argument style</span></li></ul><p><span>For anyone interested, the code behind the project is open-sourced </span><a href='https://github.com/petezh/E-Debate'><span>here</span></a><span>. A big thanks to Raul Larsen for maintaining his very helpful </span><a href='https://docs.google.com/spreadsheets/d/1liUmwmpt5ku-urlXx_v4OkzIDOcNTaxviAmtG0XUDhg'><span>TOC Calendar</span></a><span>. Thanks as well to Alan George, Aimun Khan, and Joanne Park for their helpful edits and suggestions.</span></p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>The full list of tournaments includes: Alta, Apple Valley, Blake, Blue Key, Bronx, College Prep, Cypress, Dowling, Duke, Glenbrooks, Grapevine, Greenhill, JW Patterson, Holy Cross, Isidore, Meadows, Nano Nagle (Voices), Princeton, Ridge, Seattle, Strake, UK, UT, Valley, Yale.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> <span>I calculate the distance between two latitude and longitude pairs using Haversine Distance. You can more about that </span><a href='https://www.movable-type.co.uk/scripts/latlong.html'><span>here</span></a><span>.</span> <a name='dfref-footnote-2' href='#ref-footnote-2' title='back to document' class='reversefootnote' >↩</a></div></div></div>
+</body>
+</html>

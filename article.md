@@ -6,7 +6,7 @@ By Peter Zhang
 
 Tournaments this season have, so far, been held exclusively online. While judging debate rounds certainly feels different through a Zoom window, virtual platforms could also affect who chooses to sign up for tournaments.
 
-Plenty of factors could be relevant in the transition. One is that location no longer matters: you can compete at someone's tournament whether you're in the same county or across the country. At the same time, the format could reward debaters with better Wi-Fi connections and mics. Countless other factors, like the economic hardship imposed by the pandemic or decreased support from schools, may also alter the face of the competition.
+Plenty of factors could be relevant in the transition. One is that location no longer matters: you can compete at someone's tournament whether you're in the same county or across the country. At the same time, the format could reward debaters with better Wi-Fi connections and mics. Many other factors, like the economic hardship imposed by the pandemic or decreased support from schools, may also alter the face of the competition.
 
 So, who are the e-debaters? This article takes a look at five trends in the data.
 
@@ -24,7 +24,7 @@ A first glance at the data highlighted big shifts over the last year. Among them
 - The total number of entries increased by 17.5% from 2019 to 2020. 
 - Tournaments gained an average of 18 competitors this year.
 
-The decrease in distinct debaters shouldn't be surprising. Teams could've had a tough time recruiting new debaters. Debaters themselves could've had other priorities in their lives. And, competitors who enjoyed the social aspects of debate may have felt that tournaments were no longer worth it. 
+The decrease in distinct debaters shouldn't be surprising. Teams could've had a tough time recruiting new debaters. Debaters themselves might have had other priorities in their lives. And, competitors who enjoyed the social aspects of debate may have felt that tournaments were no longer worth it. 
 
 The bump in entries is also predictable. With fewer logistical barriers, avid debaters could've had greater access to tournaments. Moreover, many tournaments usually held early in the year were postponed (e.g. St. Marks, Notre Dame), which might have concentrated interest in remaining, available tournaments.
 
@@ -34,13 +34,13 @@ The increase in entries wasn't uniform across all tournaments. Twenty tournament
 
 ![](images/changeentries.png)
 
-Competitive incentives can explain the difference, and the trio of Alta, UT, and Princeton offers an insightful example. The three semis bid tournaments were held on the same weekend in both 2019 and 2020. This year, UT and Princeton lost a third of their entries; Alta's pool *increased* by nearly half. That's interesting enough, but let's take a look at the pools this year: UT had 100 entries, Alta had 109, and Princeton, 112 — roughly equal. This equilibrium is exactly what we'd expect if, in the absence of geographic barriers, debaters just followed the bids.
+Competitive incentives can explain the difference, and the trio of Alta, UT, and Princeton offers an insightful example. The three semis bid tournaments were held on the same weekend in both 2019 and 2020. This year, UT and Princeton lost a third of their entries; Alta's pool *increased* by nearly half. That's interesting enough, but let's take a look at the pools this year: UT had 100 entries, Alta had 109, and Princeton, 112—roughly equal. This equilibrium is exactly what we'd expect if, in the absence of geographic barriers, debaters just followed the bids.
 
 ![](images/altautpton.png)
 
-Two other case studies stand out. The first is Loyola, a *quarters* bid: it tripled the size of its pool from 66 to 172. But this is reasonable in light of the fact that no other tournaments were scheduled for that weekend, so debaters didn't have a choice.
+Two other case studies stand out. The first is Loyola, a *quarters* bid: it tripled the size of its pool from 66 to 172. Baffling on face, but reasonable in light of the fact that no other tournaments were scheduled for that weekend—debaters didn't have a choice.
 
-The second is JW Patterson and Bronx. What caused JW's entry pool to collapse? The answer, it seems, is that debaters abandoned JW (a finals bid) to compete at Bronx (an octas bid), which offered fourteen more bids. Sure enough, Bronx picked up fourteen more competitors this year. After factoring bidding opportunity, the 37 to 185 disparity seems a lot more reasonable, maybe even too small!
+The second is JW Patterson and Bronx. What caused JW's entry pool to collapse? The answer, it seems, is that debaters abandoned JW (a finals bid) to compete at Bronx (an octas bid), which offered fourteen more bids. Sure enough, Bronx picked up fourteen more competitors this year. After factoring bidding opportunity, the 37 to 185 disparity seems a lot more reasonable (maybe even too small!).
 
 ![](images/loypatbrx.png)
 
@@ -52,15 +52,15 @@ Across the board, smaller states grew their presence. Just take a look at Arizon
 
 ![](images/stateinc.png)
 
-Among larger states, the biggest winner by far was California, where entries skyrocketed from 528 to 840 (that increase is, by necessity, omitted from the map below). New Jersey, New York, North Carolina, and Texas were stable, while Florida, Iowa, Massachusetts, Minnesota, Pennsylvania, and Washington saw moderate increases. Meanwhile, states like Alabama, Illinois, Louisiana, Nebraska, and Virginia — many in Southeast — saw fairly large declines in participation.
+Among larger states, the biggest winner by far was California, where entries skyrocketed from 528 to 840 (that increase is, by necessity, omitted from the map below). New Jersey, New York, North Carolina, and Texas were stable, while Florida, Iowa, Massachusetts, Minnesota, Pennsylvania, and Washington saw moderate increases. Meanwhile, states like Alabama, Illinois, Louisiana, Nebraska, and Virginia—many in Southeast—saw fairly large declines in participation.
 
 ![](images/stateentries.png)
 
-But are these increases actually driven by debaters competing at faraway tournaments? Yes, and very much so.
+But are these increases actually driven by debaters competing at faraway tournaments? As it turns out, yes.
 
 I estimated the location of a given tournament or competitor from the [geographic centroid](https://developers.google.com/public-data/docs/canonical/states_csv) of their state. With two sets of coordinates, I computed the distance[^2] between a tournament and each of their competitors. It isn't very accurate, but it should certainly reveal if, for example, more West Coast debaters are competing on the East Coast.
 
-The average competitor traveled about 350 miles to tournaments in 2019; this year, the average competitor was 700 miles away from their host. Debaters from Texas, Utah, Nevada, New Jersey, Minnesota made the biggest leaps in distance, which makes sense — states that could usually count on great local tournaments have chosen to explore.
+The average competitor traveled about 350 miles to tournaments in 2019; this year, the average competitor was 700 miles away from their host. Debaters from Texas, Utah, Nevada, New Jersey, Minnesota made the biggest leaps in distance, which makes sense: states that could usually count on great local tournaments have chosen to explore.
 
 ![](images/distance.png)
 
@@ -96,17 +96,18 @@ There were several limitations to this analysis:
 
 - I omitted tournaments that were held in the fall of 2019 that were postponed this year, which likely underestimated participation in 2019.
 - Some entries either omitted or falsified information (why, Princeton, did you say you were from Maine?). I rooted out some obvious errors, but a more detailed review could be helpful.
-- Estimates for location wealth, and education were all based on state-level data. More granular data, perhaps drawing on information about schools, could greatly improve the accuracy of the analyses.
+- Estimates for location wealth, and education were all based on state-level data.
 - The z-test assumes that samples are normal. While both samples seem to be bell-shaped, normality tests decisively show that they are not normally distributed.
 - The pooled z-test assumes two independent samples. In reality, the 2019 and 2020 samples are likely to be fairly correlated, which means the standard error may be an overestimation. As a result, the p-values are probably conservative.
 
-Some avenues for future analysis include:
+Avenues for future analysis include:
 
-- Extending the analysis farther back in time to track multi-year trends
-- Studying judge pools — are they diversifying?
+- Extending the analysis across multiple years and different events
+- Incorporating more granular data, perhaps drawing on testing/income stats on the school level
+- Studying judge pools—are they similarly diversifying?
 - Cross-referencing the wiki to infer changes in argument style
 
-A big thanks to Raul Larsen for maintaining his very helpful [TOC Calendar](https://docs.google.com/spreadsheets/d/1liUmwmpt5ku-urlXx_v4OkzIDOcNTaxviAmtG0XUDhg). Thanks as well to Alan George, Aimun Khan, and Joanne Park for their suggestions and comments.
+For anyone interested, the code behind the project is open-sourced [here](https://github.com/petezh/E-Debate). A big thanks to Raul Larsen for maintaining his very helpful [TOC Calendar](https://docs.google.com/spreadsheets/d/1liUmwmpt5ku-urlXx_v4OkzIDOcNTaxviAmtG0XUDhg). Thanks as well to Alan George, Aimun Khan, and Joanne Park for their helpful edits and suggestions.
 
 [^1]: The full list of tournaments includes: Alta, Apple Valley, Blake, Blue Key, Bronx, College Prep, Cypress, Dowling, Duke, Glenbrooks, Grapevine, Greenhill, JW Patterson, Holy Cross, Isidore, Meadows, Nano Nagle (Voices), Princeton, Ridge, Seattle, Strake, UK, UT, Valley, Yale.
 [^2]: I calculate the distance between two latitude and longitude pairs using Haversine Distance. You can more about that [here](https://www.movable-type.co.uk/scripts/latlong.html).
