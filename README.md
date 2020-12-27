@@ -9,4 +9,4 @@ Most of the analysis was conducted in the `analysis.ipynb` Notebook. Some analys
 
 #### Contact
 
-This project was part of a larger collection of scraping and analysis tools related to debate. If you're interested in learning more, reach out to me on [Facebook](https://www.facebook.com/peters.zhang/) or at petez@berkeley.edu.
+This project was part of a larger collection of scraping and analysis tools related to debate. If you're interested in learning more, reach out to me on [Facebook](https://www.facebook.com/petejzh/) or at petez@berkeley.edu.
