@@ -58,7 +58,7 @@ Among larger states, the biggest winner by far was California, where entries sky
 
 But are these increases actually driven by debaters competing at faraway tournaments? As it turns out, yes.
 
-I estimated the location of a given tournament or competitor from the [geographic centroid](https://developers.google.com/public-data/docs/canonical/states_csv) of their state. With two sets of coordinates, I computed the distance[^2] between a tournament and each of their competitors. It isn't very accurate, but it should certainly reveal if, for example, more West Coast debaters are competing on the East Coast.
+I estimated the location of a given tournament or competitor from the [geographic centroid](https://developers.google.com/public-data/docs/canonical/states_csv) of their state. With two sets of coordinates, I computed the distance between a tournament and each of their competitors. It isn't very accurate, but it should certainly reveal if, for example, more West Coast debaters are competing on the East Coast.
 
 The average competitor traveled about 350 miles to tournaments in 2019; this year, the average competitor was 700 miles away from their host. Debaters from Texas, Utah, Nevada, New Jersey, Minnesota made the biggest leaps in distance, which makes sense: debaters that normally would just attend in-state bid tournaments have chosen to explore.
 
@@ -110,4 +110,3 @@ Avenues for future analysis include:
 For anyone interested, the code behind the project is open-sourced [here](https://github.com/petezh/E-Debate). A big thanks to Raul Larsen for maintaining his very helpful [TOC Calendar](https://docs.google.com/spreadsheets/d/1liUmwmpt5ku-urlXx_v4OkzIDOcNTaxviAmtG0XUDhg). Thanks as well to Alan George, Aimun Khan, and Joanne Park for their helpful edits and suggestions.
 
 [^1]: The full list of tournaments includes: Alta, Apple Valley, Blake, Blue Key, Bronx, College Prep, Cypress, Dowling, Duke, Glenbrooks, Grapevine, Greenhill, JW Patterson, Holy Cross, Isidore, Meadows, Nano Nagle (Voices), Princeton, Ridge, Seattle, Strake, UK, UT, Valley, Yale.
-[^2]: I calculate the distance between two latitude and longitude pairs using Haversine Distance. You can more about that [here](https://www.movable-type.co.uk/scripts/latlong.html).
