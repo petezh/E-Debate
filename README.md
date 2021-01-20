@@ -1,7 +1,7 @@
 # E-Debate Entries Analysis
 #### About
 
-The project analyzed trends in debate tournament entries from 2019 and 2020. All data for the project are available in the `datasets` folder. The `entries.csv` contains scraped entries pages from 37 tournaments. Please reach out to me for interest in the scraper.
+The project analyzed trends in debate tournament entries from 2019 and 2020. A write-up for the article is published on [VBriefly](https://www.vbriefly.com/2020/12/31/five-trends-among-e-debate-competitors-by-peter-zhang/), with updates to the article posted on my [blog](https://peterzhang.info/e-debate-update). All data for the project are available in the `datasets` folder. The `entries.csv` contains scraped entries pages from 37 tournaments. Please reach out to me for interest in the scraper.
 
 The `actscores.csv` dataset is sourced from [Statista](https://www.statista.com/statistics/305987/us-average-act-scores-by-state/). The `income.csv`  data is taken from the [St. Louis fed](https://fred.stlouisfed.org/series/MEHOINUSA672N). The `locations.csv` dataset is sourced from [Google](https://developers.google.com/public-data/docs/canonical/states_csv).
 
